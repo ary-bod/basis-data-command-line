@@ -1,0 +1,8 @@
+CREATE TABLE dokter (
+kd_dokter int(11) primary key,
+nama_dokter varchar(30) NOT NULL,
+spesialis varchar(30) NOT NULL,
+jenis_kelamin enum('Pria', 'Wanita'),
+alamat varchar(50) NOT NULL,
+email varchar(30) NOT NULL,
+no_telp varchar(15) NOT NULL);
