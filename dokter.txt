@@ -6,3 +6,26 @@ jenis_kelamin enum('Pria', 'Wanita'),
 alamat varchar(50) NOT NULL,
 email varchar(30) NOT NULL,
 no_telp varchar(15) NOT NULL);
+
+CREATE TABLE pasien (
+kd_pasien int(11) primary key,
+nama varchar(30),
+jenis_kelamin enum('Pria', 'Wanita'),
+tempat_tinggal varchar(20),
+tgl_lahir date,
+alamat varchar(50),
+usia varchar(2));
+
+CREATE TABLE obat (
+kd_obat varchar(5) primary key NOT NULL,
+nama_obat varchar(20) NOT NULL,
+jenis enum('Tablet', 'Serbut', 'Pil', 'Kapsul', 'Larutan') NOT NULL,
+stok int(4) NOT NULL,
+tgl_expired date NOT NULL,
+harga int(15) NOT NULL);
+
+CREATE TABLE resep (
+no_resep varchar(5) primary key NOT NULL,
+tgl_resep date NOT NULL,
+aturan_pakai varchar(5) NOT NULL,
+jumlah_obat int(3) NOT NULL);
